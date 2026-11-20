@@ -23,3 +23,8 @@ A standalone `model.pt` file only stores the final trained weights—it contains
 ### Engineering Checkpoint 2
 No, the seed make a random choices (weight init, shuffle order, augmentation) the same but the arithmetic can still differ between machines.
 
+### Engineering checkpoint 3
+- Git remote store my code, configs and history plus the sage data/raw/raw.dvc pointer file with hash images 
+- DVC stores the actual raw images files and it saves under their content hashes
+- Git push didnt send the images we need to have dvc push to upload the images in dvc remote 
+
