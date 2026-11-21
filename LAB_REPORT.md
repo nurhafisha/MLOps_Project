@@ -23,8 +23,39 @@ A standalone `model.pt` file only stores the final trained weights—it contains
 ### Engineering Checkpoint 2
 No, the seed make a random choices (weight init, shuffle order, augmentation) the same but the arithmetic can still differ between machines.
 
+## Milestone 2 - Extract and track the images
+
 ### Engineering checkpoint 3
 - Git remote store my code, configs and history plus the sage data/raw/raw.dvc pointer file with hash images 
 - DVC stores the actual raw images files and it saves under their content hashes
 - Git push didnt send the images we need to have dvc push to upload the images in dvc remote 
 
+## Milestone 3 - Implement a Core data-quality gate
+
+During this work, there is an error `cannot identify image file 'data/raw/train/healthy/zz_fake.jpg'`
+We need to delete the fake file and run the check again 
+
+## Milestone 4 - Design the DVC pipeline from scratch
+         +--------------+          
+        | data/raw.dvc |          
+        +--------------+          
+           **        **           
+         **            **         
+        *                **       
++----------+               *      
+| validate |             **       
++----------+           **         
+           **        **           
+             **    **             
+               *  *               
+           +---------+            
+           | prepare |            
+           +---------+            
+           **        **           
+         **            **         
+        *                *        
+  +-------+         +----------+  
+  | train |         | evaluate |  
+  +-------+         +----------+ 
+
+  
