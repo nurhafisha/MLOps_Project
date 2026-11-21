@@ -126,3 +126,10 @@ Run C: learning rate back to 0.001, and one change: train.dropout from 0.30 to 0
 
 ### Engineering Checkpoint 6:
 I use validation macro-F1 because it computes the F1 score for each of the three classes and averages them with equal weight. A model that is weak on one disease class gets a lower macro-F1 even if its overall accuracy looks good, and in disease detection each class matters. The test set is used only after choosing the model, because if I used test scores to choose, I would be picking the model that happens to fit the test images best, and the final test score would be too optimistic. The test set must stay unseen so it gives an honest estimate of performance on new images.
+
+## Milestone 8 - Select and test one model
+
+- I choose Run A : 0ab0151755cf4bc9a7868e8ead6ccf4d
+- Main metric: validation macro-F1 = 0.625
+- Other evidence | lowest final val_loss: 0.833
+- Trade-off / limitation: the choice is based on one seed and a small validation set (133 images), so a small difference between Runs may be noise. Training for only 4 epochs may also favour settings that learn fast.
