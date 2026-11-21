@@ -120,6 +120,9 @@ Run C: learning rate back to 0.001, and one change: train.dropout from 0.30 to 0
 
 | Run | Controlled change | Val. Accuracy | Val. Macro-F1 | Training time | MLflow Run ID |
 | :---: | :--- | ---: | ---: | ---: | :--- |
-| A | Baseline (`lr` 0.001, `dropout` 0.30) | 0.624| 0.614 | 10.5 s | `0ab0151755cf4bc9a7868e8ead6ccf4d` |
+| A | Baseline (`lr` 0.001, `dropout` 0.30) | 0.639| 0.625 | 10.5 s | `0ab0151755cf4bc9a7868e8ead6ccf4d` |
 | B | `learning_rate` 0.0003 | 0.617 | 0.609 | 10.5 s | `feff4e6f88af47a59caa267a545dd2cb` |
-| C | `dropout` 0.50 | 0.639 | 0.625 | 14.2s s | `f09b85d8c510474d9184595b94ef021e` |
+| C | `dropout` 0.50 | 0.624| 0.614 | 14.2s s | `f09b85d8c510474d9184595b94ef021e` |
+
+### Engineering Checkpoint 6:
+I use validation macro-F1 because it computes the F1 score for each of the three classes and averages them with equal weight. A model that is weak on one disease class gets a lower macro-F1 even if its overall accuracy looks good, and in disease detection each class matters. The test set is used only after choosing the model, because if I used test scores to choose, I would be picking the model that happens to fit the test images best, and the final test score would be too optimistic. The test set must stay unseen so it gives an honest estimate of performance on new images.
