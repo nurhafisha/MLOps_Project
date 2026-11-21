@@ -116,3 +116,10 @@ The baseline ran all three stages because the pipeline had never run through DVC
 Run C: learning rate back to 0.001, and one change: train.dropout from 0.30 to 0.50.
 
 **Expectation:** more dropout switches off more neurons during training. This reduces overfitting but makes learning harder, so in only 4 epochs I expect a slightly higher training loss and similar or slightly lower validation scores than Run A.
+
+
+| Run | Controlled change | Val. Accuracy | Val. Macro-F1 | Training time | MLflow Run ID |
+| :---: | :--- | ---: | ---: | ---: | :--- |
+| A | Baseline (`lr` 0.001, `dropout` 0.30) | 0.624| 0.614 | 10.5 s | `0ab0151755cf4bc9a7868e8ead6ccf4d` |
+| B | `learning_rate` 0.0003 | 0.617 | 0.609 | 10.5 s | `feff4e6f88af47a59caa267a545dd2cb` |
+| C | `dropout` 0.50 | 0.639 | 0.625 | 14.2s s | `f09b85d8c510474d9184595b94ef021e` |

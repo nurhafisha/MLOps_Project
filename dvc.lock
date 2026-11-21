@@ -133,24 +133,24 @@ stages:
         tracking.experiment: bean-image-classification
         tracking.uri: http://127.0.0.1:5000
         train.batch_size: 32
-        train.dropout: 0.3
+        train.dropout: 0.5
         train.epochs: 4
-        train.learning_rate: 0.0003
+        train.learning_rate: 0.001
         train.random_state: 42
     outs:
     - path: models/model.pt
       hash: md5
-      md5: cd5a731b798d57b0355e381165f677e9
+      md5: e10f2df8cda06e895645c7e3e4ea9971
       size: 98673
     - path: reports/run_manifest.json
       hash: md5
-      md5: 6cef2fd4000fa7965d8799d03c0aed91
-      size: 805
+      md5: 0a0743d5fdb3ccfa3e4fa4ab5c037766
+      size: 804
     - path: reports/train_summary.json
       hash: md5
-      md5: 8bb1a97a70dc4553df085ee2e627042a
-      size: 247
+      md5: 72b05fd031587d0459b4f3e526d67d1f
+      size: 248
     - path: reports/training_curves.png
       hash: md5
-      md5: 4c4aa4b1716879c6cd8f0b25da20022c
-      size: 104901
+      md5: c9a85d727c2d2e6651a8e91f9a2f9678
+      size: 93942
