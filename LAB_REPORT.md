@@ -109,5 +109,5 @@ DVC Predictions:
 
 The baseline ran all three stages because the pipeline had never run through DVC before (no dvc.lock yet). The other results matched my predictions.
 
-Run A ID: <0ab0151755cf4bc9a7868e8ead6ccf4d>
-
+- Run A ID: < 0ab0151755cf4bc9a7868e8ead6ccf4d >
+- Run B ID: < feff4e6f88af47a59caa267a545dd2cb >
