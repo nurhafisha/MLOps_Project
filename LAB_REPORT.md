@@ -133,3 +133,14 @@ I use validation macro-F1 because it computes the F1 score for each of the three
 - Main metric: validation macro-F1 = 0.625
 - Other evidence | lowest final val_loss: 0.833
 - Trade-off / limitation: the choice is based on one seed and a small validation set (133 images), so a small difference between Runs may be noise. Training for only 4 epochs may also favour settings that learn fast.
+
+### Final test results (reports/test_metrics.json)
+```text
+{
+  "selected_run_id": "0ab0151755cf4bc9a7868e8ead6ccf4d",
+  "test_accuracy": 0.6484375,
+  "test_macro_f1": 0.6444771241830066,
+  "training_data_identity": "8fa943ff6c17a3c874d2b152e9d7980602a5cd50c0d8156625bd00590a3d8c6c"
+}
+
+- Test macro-F1 is 0.644, compared with 0.625 on validation, the model isn't overfitting, and doing slightly better on the test set.
