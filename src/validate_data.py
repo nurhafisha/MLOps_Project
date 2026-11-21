@@ -81,7 +81,7 @@ def validate_dataset(raw_root: Path) -> dict:
     }
 
         
-
+# checked data before training
 
 def main() -> None:
     report = validate_dataset(Path("data/raw"))

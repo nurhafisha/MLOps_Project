@@ -43,7 +43,7 @@ def _git(*args: str) -> str | None:
         return None
     if result.returncode != 0: # not inside repo
         return None 
-    return result.srdout.strip()
+    return result.stdout.strip()
 
 def _package_version(name: str) -> str:
     """ Return installed version of  a package, or "not installed" """

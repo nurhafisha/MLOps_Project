@@ -1,0 +1,34 @@
+{
+  "configuration": {
+    "augmentation_enabled": false,
+    "batch_size": 32,
+    "dropout": 0.3,
+    "epochs": 4,
+    "horizontal_flip": 0.5,
+    "image_size": 96,
+    "learning_rate": 0.001,
+    "rotation_degrees": 10.0
+  },
+  "data": {
+    "training_data_identity": "8fa943ff6c17a3c874d2b152e9d7980602a5cd50c0d8156625bd00590a3d8c6c"
+  },
+  "environment": {
+    "cuda_available": false,
+    "cuda_runtime": null,
+    "dvc": "3.67.1",
+    "mlflow": "3.17.1",
+    "platform": "macOS-15.0-arm64-arm-64bit",
+    "python": "3.12.16",
+    "torch": "2.11.0",
+    "torchvision": "0.26.0"
+  },
+  "execution": {
+    "device": "cpu",
+    "mlflow_run_id": "0ab0151755cf4bc9a7868e8ead6ccf4d",
+    "random_state": 42
+  },
+  "git": {
+    "commit": "3f4d3aa90aa93449d1c1006b62d632947ce3ca36",
+    "dirty": true
+  }
+}
