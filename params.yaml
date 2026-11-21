@@ -4,8 +4,8 @@ data:
 train:
   batch_size: 32
   epochs: 4
-  learning_rate: 0.0003
-  dropout: 0.30
+  learning_rate: 0.001
+  dropout: 0.50
   random_state: 42
 
 augmentation:

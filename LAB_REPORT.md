@@ -111,3 +111,8 @@ The baseline ran all three stages because the pipeline had never run through DVC
 
 - Run A ID: < 0ab0151755cf4bc9a7868e8ead6ccf4d >
 - Run B ID: < feff4e6f88af47a59caa267a545dd2cb >
+
+## Milestone 7 - Compare three controlled runs
+Run C: learning rate back to 0.001, and one change: train.dropout from 0.30 to 0.50.
+
+**Expectation:** more dropout switches off more neurons during training. This reduces overfitting but makes learning harder, so in only 4 epochs I expect a slightly higher training loss and similar or slightly lower validation scores than Run A.
